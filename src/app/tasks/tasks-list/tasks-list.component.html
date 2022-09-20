@@ -1,0 +1,21 @@
+<app-task-adding></app-task-adding>
+
+<div class="container mt-4">
+    <h6>Tasks</h6>
+<ul class="list-group">
+    <li class="list-group-item d-flex" *ngFor="let task of tasks; let i = index"  >
+        <button class="check-btn px-2" [ngClass]="{'done': task.done}" (click)="toggleDone(i)"><i class="fa fa-check"></i></button>
+        <p class="m-0" [ngClass]="{'done': task.done}">{{task.name}}</p>
+
+        <div class="actions ms-auto">
+            <a class="mx-2" [routerLink]="['/',i,'detail']">
+                <i class="fa-regular fa-pen-to-square"></i>
+            </a>
+            <a (click)="onDeleteTask(i)">
+                <i class="fa-solid fa-xmark"></i>
+            </a>
+        </div>
+        
+    </li>
+</ul>
+</div>

@@ -1,0 +1,7 @@
+<div class="container my-2">
+    <form #addingForm="ngForm" (ngSubmit)="onAdd(addingForm)"  class="d-flex gap-3">  
+        <input required name="name" #name="ngModel" ngModel type="text" class="form-control" placeholder="What needs to be done...">
+        <button class="btn px-4" type="submit" [disabled]="addingForm.invalid" >Add</button>
+    </form>
+    <p class="text-danger" *ngIf="addingForm.touched && addingForm.invalid">your Task must have a name!</p>
+</div>

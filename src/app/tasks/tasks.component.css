@@ -1,0 +1,6 @@
+.tasks {
+    max-width: 50rem;
+    background-color: #fff;
+    min-height: 25rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.319);
+}
